@@ -190,30 +190,16 @@ main {
 .featured-content {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
-.content-box {
-    width: 80%;  /* Adjust width as needed */
-    height: 70%; /* Adjust height as needed */
-    border: 2px solid #00FFFF; /* Light blue border */
-    background-color: rgba(75, 0, 130, 0.3); /* Semi-transparent purple */
-    border-radius: 10px;
-    position: relative; /* For the arrow */
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 15px solid #FF416C; /* Red/Orange arrow */
+.featured-image {
+    width: auto;  /* или конкретное значение, например 500px */
+    height: auto; /* или конкретное значение, например 300px */
+    max-width: 100%; /* Чтобы картинка не выходила за границы контейнера */
+    max-height: 100%;
+    /* Дополнительные стили, если нужно */
+    border-radius: 10px; /* Пример: скругление углов */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Пример: тень */
 }
 
 
