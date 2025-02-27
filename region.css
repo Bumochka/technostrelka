@@ -1,0 +1,258 @@
+:root {
+    --bg-color: #140a2e;  /* Dark purple background */
+    --text-color: #ffffff; /* White text */
+    --accent-color: #FFA500; /* Reddish-orange accent */
+    --button-gradient-start: #FFC107;
+    --button-gradient-end: #FFA500;
+}    
+body {
+font-family: sans-serif; /* or a better font like 'Roboto', 'Arial', etc. */   
+background: linear-gradient(to bottom, #4a148c, #140a2e); /* Purple Gradient Background */
+color: #ffffff; /* Goldish Text Color */
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+    font-family: "Apple Chancery", "URW Chancery L", cursive;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 5px;
+    padding: 0;
+    margin-right: 0px;
+}
+
+header nav ul li {
+    margin-left: 38px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent; /* For hover effect */
+}
+
+header nav ul li a:hover {
+    border-bottom: 2px solid var(--accent-color); /* Highlight on hover */
+    color: var(--accent-color)
+}
+
+nav a.active {
+    color: #FFA500; /* Orange color for active link */
+    border-bottom: 2px solid #FFA500;
+    padding-bottom: 5px;
+
+}
+
+/* Roadmap Styling */
+.roadmap-container {
+    margin-left: -50px;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* Added a max-width for readability */
+}
+
+.roadmap-title {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: bold;
+    background: linear-gradient(to right, #FF416C, #FFD84D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+    position: relative;
+    margin: 20px auto;
+    width: 90%; /* Adjust width as needed */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Center the line */
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+}
+
+.timeline-event {
+    display: flex;
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative; /* For positioning the dot */
+}
+
+.timeline-event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-event-dot {
+    position: absolute;
+    top: 15px; /* Adjust for vertical positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #ffc107; /* Dot color */
+    border-radius: 50%;
+    z-index: 1; /* Ensure it's above the line */
+}
+
+.timeline-event-content {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    width: 45%; /* Adjust as needed for layout */
+    position: relative; /* For triangle */
+}
+
+.timeline-event:nth-child(even) .timeline-event-content {
+    text-align: left;
+}
+
+.timeline-event-content::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent;
+    z-index: 10; /* above the content */
+}
+
+.timeline-event:nth-child(even) .timeline-event-content::before {
+    left: -20px;
+    top: 13px;
+    border-right-color: rgba(255, 255, 255, 0.1); /* Triangle color */
+}
+
+.timeline-event .timeline-event-content::before {
+    right: -32px;
+    top: 13px;
+    border-left-color: rgba(255, 255, 255, 0.1); /* Triangle color */
+    
+}
+
+.timeline-event-date {
+    font-weight: bold;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #FF416C, #FFD84D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline-event-description {
+    font-size: 0.9em;
+    line-height: 1.4;
+    background: linear-gradient(to right, #FF416C, #FFD84D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+    .timeline-event {
+        flex-direction: column !important; /* Force vertical layout */
+        align-items: center;
+    }
+
+    .timeline-event-content {
+        width: 80%;
+        text-align: center !important;
+        margin-bottom: 20px; /* Add some space below the content */
+    }
+
+    .timeline-event:nth-child(even) .timeline-event-content {
+        text-align: center; /* Reset text alignment */
+    }
+    .timeline-event-content::before {
+        display: none;
+    }
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-event-dot {
+        left: 20px;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-event:nth-child(even) .timeline-event-content {
+    text-align: left; /* Changed to right alignment for even content */
+}
+.timeline-event .timeline-event-content {
+    text-align: right; /* Ensure left side is left-aligned */
+}
+
+.image-containerr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicking through the container */
+  }
+  
+  .v1 {
+    top: 50%;
+    left: 15%;
+    animation-delay: 1s;
+    animation: moveCircle1 11s linear infinite;
+    position: absolute;
+    width: 60px; /* Adjust size as needed */
+    opacity: 0.8;
+  } 
+  .v2 {
+    top: 85%;
+    right: 2%;
+    animation: moveCircle2 7s linear infinite;
+    position: absolute;
+    width: 60px; /* Adjust size as needed */
+    opacity: 0.8;
+    transform: rotate(45deg);
+  }
+  @keyframes moveCircle1 {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(290px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg) translateX(290px) rotate(360deg);
+    } 
+}
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(-50%, -50%) translateX(150px) translateY(0) rotate(25deg); /* правая Начальная позиция */
+    }
+    25% {
+        transform: translate(-50%, -50%) translateX(0) translateY(100px) rotate(85deg); /* Верхняя точка овала */
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(-150px) translateY(0) rotate(115deg); /* Левый край овала */
+    }
+    75% {
+        transform: translate(-50%, -50%) translateX(0) translateY(-100px) rotate(275deg); /* Нижняя точка овала */
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(150px) translateY(0) rotate(385deg); /* Возвращение в начальную позицию */
+    }
+}
