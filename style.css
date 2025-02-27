@@ -190,6 +190,7 @@ main {
 .featured-content {
     flex: 1;
     display: flex;
+    pointer-events: none;
 }
 
 .featured-image {
@@ -200,7 +201,6 @@ main {
     /* Дополнительные стили, если нужно */
     border-radius: 10px; /* Пример: скругление углов */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Пример: тень */
-    pointer-events: none;
 }
 
 
