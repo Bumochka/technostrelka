@@ -185,6 +185,7 @@ bo {
     padding: 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: -10px 10px 20px 0px rgba(188, 204, 42, 0.5);
   }
 
   .image-slider {
@@ -221,7 +222,9 @@ bo {
   }
 
   .feature-title {
-    color: #FFA500;
+    background: linear-gradient(to right, #FF416C, #FFD84D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.5em;
     margin-bottom: 10px;
   }
