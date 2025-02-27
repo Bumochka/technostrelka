@@ -270,56 +270,35 @@ p11 {
     margin-bottom: 20px;
 }
 
-.buttos {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center; /* Центрируем кнопки горизонтально */
-    gap: 20px;
-}
 
-.butto {
+
+
+
+
+
+.butto1, .butto2 { /* Объединяем стили для обоих классов */
+    background: linear-gradient(to right, #FF416C, #FFD84D);
+    font-weight: bold;
+    border: none;
+    overflow: hidden;
+    font-family: "Apple Chancery", "URW Chancery L", cursive;
     padding: 10px 20px;
-    border: 1px solid #FF416C; /* Light Yellow/Orange для обводки */
     color: white;
-    background-color: transparent;
     text-decoration: none;
     font-size: 1em;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
     position: relative;
     transition: transform 0.2s ease-in-out;
+    display: inline-block; /* Добавляем, чтобы кнопки располагались в строку */
 }
 
-.butto:hover {
-    background-color: #FF416C; /*  Добавляем фон при наведении  */
+.butto1:hover, .butto2:hover {
     transform: scale(1.05);
 }
 
-
-.butto::before {
-    content: "";
-    position: absolute;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10px;
-    height: 10px;
-    background-color: #FFD84D;
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    opacity: 0.8;
-}
-
-.butto::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-    width: 10px;
-    height: 10px;
-    background-color: #FFD84D;
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    opacity: 0.8;
+.buttos {
+    /* Стили для контейнера кнопок, например, для задания отступов */
+    margin-top: 40px; /* Пример: отступ сверху */
 }
 
 /* Добавим небольшую стилизацию для "декоративных" элементов.  В оригинале они были на фоне.  */
@@ -330,7 +309,7 @@ p11 {
 }
 
 .decorative-element-1 {
-    top: 235%;
+    top: 295%;
     left: 15%;
     width: 30px;
     height: 30px;
@@ -340,7 +319,7 @@ p11 {
 }
 
 .decorative-element-2 {
-    bottom: -170%;
+    bottom: -230%;
     right: 5%;
     width: 40px;
     height: 40px;
