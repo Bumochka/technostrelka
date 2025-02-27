@@ -186,6 +186,7 @@ bo {
     position: relative;
     overflow: hidden;
     box-shadow: -10px 10px 20px 0px rgba(188, 204, 42, 0.5);
+    pointer-events: none;
   }
 
   .image-slider {
