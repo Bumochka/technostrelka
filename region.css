@@ -75,12 +75,14 @@ nav a.active {
     background: linear-gradient(to right, #FF416C, #FFD84D);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: "URW Chancery L", cursive;
 }
 
 .timeline {
     position: relative;
     margin: 20px auto;
     width: 90%; /* Adjust width as needed */
+    font-family: "URW Chancery L", 'cursive';
 }
 
 .timeline::before {
