@@ -123,8 +123,10 @@ nav a.active {
     background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
     padding: 15px;
     border-radius: 8px;
-    width: 45%; /* Adjust as needed for layout */
+    width: 55%; /* Adjust as needed for layout */
     position: relative; /* For triangle */
+    margin-left: -70px;
+    margin-right: -70px;
 }
 
 .timeline-event:nth-child(even) .timeline-event-content {
