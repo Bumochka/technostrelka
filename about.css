@@ -174,6 +174,7 @@ bo {
     /* max-height: 70vh;  Optional: Adjust based on your needs */
     /* overflow-y: auto;  Optional: Add scroll if needed */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: "MS Sans Serif", sans-serif;
   }
 
   .text-section {
@@ -311,7 +312,7 @@ p11 {
 }
 
 .decorative-element-1 {
-    top: 330%;
+    top: 350%;
     left: 15%;
     width: 30px;
     height: 30px;
@@ -321,7 +322,7 @@ p11 {
 }
 
 .decorative-element-2 {
-    bottom: -270%;
+    bottom: -280%;
     right: 5%;
     width: 40px;
     height: 40px;
