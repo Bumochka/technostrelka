@@ -166,7 +166,7 @@ nav a.active {
 }
 
 .timeline-event-description {
-    font-size: 0.9em;
+    font-size: 1.0em;
     line-height: 1.4;
     background: linear-gradient(to right, #FF416C, #FFD84D);
     -webkit-background-clip: text;
