@@ -82,7 +82,7 @@ nav a.active {
     position: relative;
     margin: 20px auto;
     width: 90%; /* Adjust width as needed */
-    font-family: "URW Chancery L", 'cursive';
+    font-family: "MS Sans Serif", sans-serif;
 }
 
 .timeline::before {
